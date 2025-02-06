@@ -10,11 +10,12 @@ document.addEventListener("keypress",function(){
      setTimeout(levelUp,500);
 });
 let start=document.querySelector(".start");
-
+let help=document.querySelector(".help");
 start.addEventListener("click",function(){
     
     setTimeout(levelUp,500);
     start.classList.add("disable");
+    help.classList.add("disable");
 });
 
 function levelUp(){
@@ -72,6 +73,7 @@ function checkAns(idx){
         h3.innerText=`High Score:${HighScore}`;
         h2.innerHTML=`Game Over !<br><br> <b style='color:green;font-size:2rem'>Score : ${level}</b>`;
         start.classList.remove("disable");
+        help.classList.remove("disable");
         start.innerText="RESTART";
         reset();  
     }
